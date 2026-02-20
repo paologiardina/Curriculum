@@ -15,144 +15,7 @@
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- LinkedIn-like styling -->
-  <style>
-    body {
-      background-color: #f3f2ef;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: #191919;
-    }
-
-    .profile-cover {
-      height: 180px;
-      background: url('images/banner-904884_1280.jpg') center/cover no-repeat;
-      border-radius: 12px 12px 0 0;
-    }
-
-    .profile-card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 1px 3px rgba(0,0,0,.12);
-    }
-
-    .profile-img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #ffffff;
-      margin-top: -70px;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 600;
-    }
-
-    .headline {
-      font-size: 1.05rem;
-      color: #0a66c2;
-      font-weight: 500;
-    }
-
-    .section-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #000000;
-      margin-bottom: .5rem;
-      text-transform: uppercase;
-    }
-
-    .badge-skill {
-      background-color: #e7f3ff;
-      color: #0a66c2;
-      font-weight: 500;
-      margin: 2px 2px;
-    }
-
-    .experience-item h6 {
-      font-size: .95rem;
-      font-weight: 600;
-      margin-bottom: 0;
-    }
-
-    
-
-.experience-details {
-  font-size: 0.85rem; /* leggermente più piccolo della descrizione principale */
-  font-style: italic;
-  color: #666666; /* grigio chiaro, elegante */
-  border-left: 4px solid #0a66c2;
-  padding-left: 16px;
-}
-
-.education-details {
-  font-size: 0.85rem; /* leggermente più piccolo della descrizione principale */
-  font-style: italic;
-  color: #666666; /* grigio chiaro, elegante */
-}
-
-.language-details {
-  font-size: 0.85rem;
-  color: #666666; /* grigio elegante */
-  background-color: #ffffff;
-  padding: 10px 12px;
-  border-radius: 6px;
-  line-height: 1.4;
-}
-    .company {
-      color: #666666;
-      font-size: .85rem;
-    }
-
-    .divider {
-      border-top: 1px solid #e0e0e0;
-      margin: 1rem 0;
-    }
-      /* Riduce l'icona dell'hamburger */
-  .navbar-toggler .navbar-toggler-icon {
-    width: 24px;   /* larghezza più piccola */
-    height: 24px;  /* altezza più piccola */
-  }
-    /* Aggiunge margine superiore al menu a discesa del toggler */
-  .navbar-collapse {
-    margin-top: 10px; /* puoi aumentare se vuoi più spazio */
-  }
-
-  /* Manteniamo il menu mobile con bordi e padding coerenti */
-  .navbar-collapse .nav-link {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-.highlight-search {
-  background-color: #fff3b0;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-#backToTopBtn {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 1000;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: none; /* nascosto di default */
-  color: #0a66c2;
-  transition: opacity 0.3s;
-}
-
-#backToTopBtn:hover {
-  opacity: 0.7;
-}
-.bi-arrow-up-circle-fill::before {
-    font-size: 2.3rem;
-}
-.fixed-icon-size {
-  font-size: 32px !important; /* dimensione fissa */
-}
-  </style>
+  <link href="styles/main.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded mb-4">
@@ -179,7 +42,7 @@
     </div>
   </div>
 </nav>
-<div class="container my-4" style="max-width: 1100px;">
+<div class="container my-4 content-wrapper">
 <div class="profile-card">
 
   <!-- COVER -->
@@ -820,70 +683,19 @@ Analista Funzionale e Business Analyst con solida esperienza nella progettazione
 
     </div>
 
-    <div class="text-center text-muted mt-3" style="font-size:0.85rem;">
+    <div class="text-center text-muted mt-3 footer-note">
       &copy; 2026 Paolo Giardina. Tutti i diritti riservati.
     </div>
   </div>
 </footer>
 <!-- Back to Top Button -->
 <button id="backToTopBtn" title="Torna su">
-  <i class="bi bi-arrow-up-circle-fill" style="font-size: 2rem;"></i>
+  <i class="bi bi-arrow-up-circle-fill"></i>
 </button>
 <!-- Bootstrap JS + Popper -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const searchForm = document.getElementById("searchForm");
-  const searchInput = document.getElementById("searchInput");
-
-  searchForm.addEventListener("submit", function(e) {
-    e.preventDefault(); // previene il reload della pagina
-
-    const query = searchInput.value.trim();
-    if (!query) return;
-
-    // Rimuove eventuali evidenziazioni precedenti
-    document.querySelectorAll(".highlight-search").forEach(el => {
-      el.outerHTML = el.innerHTML;
-    });
-
-    const elements = document.querySelectorAll("body *:not(script):not(style)");
-    let firstFound = null;
-    const regex = new RegExp(query, "gi"); // ricerca case-insensitive
-
-    elements.forEach(el => {
-      if (el.children.length === 0 && regex.test(el.textContent)) {
-        el.innerHTML = el.textContent.replace(regex, match => `<span class="highlight-search">${match}</span>`);
-        if (!firstFound) firstFound = el;
-      }
-    });
-
-    // Scroll sulla prima occorrenza
-    if (firstFound) {
-      firstFound.scrollIntoView({ behavior: "smooth", block: "center" });
-    } else {
-      alert("Nessuna occorrenza trovata.");
-    }
-  });
-});
-</script>
-<script>
-// Mostra il bottone quando si scrolla verso il basso
-const backToTopBtn = document.getElementById("backToTopBtn");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) { // appare dopo 200px di scroll
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
-
-// Scroll fluido al top
-backToTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
+<script src="scripts/main.js"></script>
 
 </body>
 </html>
