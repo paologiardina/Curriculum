@@ -1,0 +1,53 @@
+{
+    "meta": {
+        "version": "1.0"
+    },
+    "menu": [
+        {
+            "id": "informazioni",
+            "label": "Informazioni",
+            "href": "#informazioni",
+            "order": 1,
+            "visible": true
+        },
+        {
+            "id": "esperienza",
+            "label": "Esperienza",
+            "href": "#esperienza",
+            "order": 2,
+            "visible": true
+        },
+        {
+            "id": "competenze",
+            "label": "Competenze",
+            "href": "#competenze",
+            "order": 3,
+            "visible": true
+        },
+        {
+            "id": "formazione",
+            "label": "Formazione",
+            "href": "#formazione",
+            "order": 4,
+            "visible": true
+        },
+        {
+            "id": "lingue",
+            "label": "Lingue",
+            "href": "#lingue",
+            "order": 5,
+            "visible": true
+        }
+    ],
+    "profile": {
+        "name": "Paolo Giardina",
+        "role": "Analista Funzionale Senior / Business Analyst – Web & Digital Solutions",
+        "location": "Roma, Italia",
+        "experience": "30 anni di esperienza",
+        "email": "giardinapaolo@hotmail.it",
+        "linkedin": "https://www.linkedin.com/in/paologiardina",
+        "profileImg": "images/profile.png",
+        "coverImg": "images/cover.jpg",
+        "cv": "giardinapaolo.pdf"
+    }
+}
