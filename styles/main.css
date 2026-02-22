@@ -7,7 +7,7 @@ body {
 
 .profile-cover {
   height: 180px;
-  background: url('../images/banner-904884_1280.jpg') center/cover no-repeat;
+  background: url('../images/cover.jpg') center/cover no-repeat;
   border-radius: 12px 12px 0 0;
 }
 

@@ -48,6 +48,508 @@
         "linkedin": "https://www.linkedin.com/in/paologiardina",
         "profileImg": "images/profile.png",
         "coverImg": "images/cover.jpg",
-        "cv": "giardinapaolo.pdf"
+        "cv": "giardinapaolo.pdf",
+        "informazioni": "Analista Funzionale e Business Analyst con solida esperienza nella progettazione e nell’evoluzione di sistemi informativi complessi nei settori Finance, Banking, Insurance, Utility e Pubblica Amministrazione Centrale. Specializzato nell’analisi funzionale e tecnico-funzionale, nella raccolta dei requisiti e nell’allineamento tra esigenze di business e soluzioni tecnologiche. Ho operato su progetti di digitalizzazione, integrazione applicativa e reingegnerizzazione di sistemi legacy, inclusi contesti HOST e linguaggi storici, accompagnandone l’evoluzione verso architetture moderne a servizi. Utilizzo UML, BPMN e Function Point Analysis e lavoro in contesti Agile/Scrum seguendo l’intero ciclo di vita del software."
+    },
+    "experience": [
+        {
+            "role": "Analista Funzionale",
+            "company": "Scai, Roma (Italia)",
+            "period": "2024 – Oggi",
+            "activities": [
+                {
+                    "description": "Analisi funzionale, progettazione dei processi e dei microservizi nell’ambito del Sistema Integrato di Monitoraggio (SIM) del MASE (Ministero dell’Ambiente e della Sicurezza Energetica), in un progetto strategico in ambito Agile volto a supportare il monitoraggio ambientale e la gestione dei rischi sul territorio nazionale.",
+                    "details": [
+                        "Analisi funzionale e modellazione dei requisiti tramite UML, Use Case, Sequence e Class Diagram.",
+                        "Definizione flussi BPMN per processi aziendali complessi.",
+                        "Gestione dei processi legati alla fruizione dei servizi applicativi tramite API REST e SPA (Single Page Application).",
+                        "Utilizzo di strumenti di gestione e collaborazione come Confluence e Jira.",
+                        "Partecipazione a team cross-funzionali in metodologia Agile / Scrum, con focus su qualità del codice, scalabilità e monitoraggio dei deliverable."
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Analista Tecnico-Funzionale",
+            "company": "Gruppo Sincrono, Roma (Italia)",
+            "period": "03/2018 – 06/2024",
+            "activities": [
+                {
+                    "description": "Analisi tecnico-funzionale relativa alla reingegnerizzazione di sistemi basati su architettura HOST/COBOL/DB2 per il calcolo e il pagamento dei sussidi straordinari di INPS.",
+                    "details": [
+                        "Raccolta requisiti funzionali e analisi dei processi.",
+                        "Redazione documentazione UML (Use Case, Sequence e Class Diagram).",
+                        "Reverse engineering programmi COBOL verso tecnologie orientate ai servizi.",
+                        "Supporto tecnico-funzionale al gruppo di sviluppo e attività di collaudo e test.",
+                        "Tecnologie: COBOL, DB2, HOST, servizi middleware."
+                    ]
+                },
+                {
+                    "description": "Analisi funzionale dei servizi online relativi alla gestione del patrimonio e degli investimenti per i clienti di POSTE ITALIANE accessibili tramite MyPoste.",
+                    "details": [
+                        "Raccolta requisiti e analisi funzionale dei servizi finanziari digitali.",
+                        "Analisi Function Point e stesura documentazione tecnico-funzionale.",
+                        "Supporto tecnico-funzionale al team di sviluppo e definizione test case per collaudo.",
+                        "Gestione anomalie e miglioramento funzionalità esistenti.",
+                        "Tecnologie: J2EE, Spring, Spring Boot, Angular/AngularJS, REST e SOAP, HTML5, Oracle WCS, Apache Tomcat, SQL."
+                    ]
+                },
+                {
+                    "description": "Analisi delle specifiche funzionali, consulenza tecnica e redazione documenti di fattibilità per la partecipazione al bando ENPAIA, progettazione e manutenzione del software per la gestione separata di Periti Agrari e Agrotecnici.",
+                    "details": [
+                        "Analisi e interpretazione specifiche funzionali software.",
+                        "Redazione documenti di fattibilità tecnica e funzionale.",
+                        "Supporto metodologico all’adozione di soluzioni basate sui requisiti del bando.",
+                        "Coordinamento con stakeholder tecnici e funzionali."
+                    ]
+                },
+                {
+                    "description": "Docenza specialistica nei programmi TALENT promossi da Sincrono Formazione e NTT DATA e attività di gestione delle risorse umane (colloqui tecnici, selezione discenti alla formazione).",
+                    "details": [
+                        "Erogazione di moduli formativi avanzati su Java, SQL e UML.",
+                        "Formazione su progettazione e sviluppo back-end, gestione database relazionali e modellazione requisiti.",
+                        "Coordinamento con enti formativi e organizzazione attività didattiche.",
+                        "Gestione colloqui tecnici e selezione personale."
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Analista Tecnico-Funzionale",
+            "company": "Proconsul Group, Roma (Italia)",
+            "period": "11/2017 – 12/2018",
+            "activities": [
+                {
+                    "description": "Analisi funzionale di un sistema relativo alla gestione delle reti elettriche di TERNA ITALIA, per la gestione degli impianti, elaborazione statistica e calcolo dell’energia ai fini della fatturazione e per le previsioni del fabbisogno.",
+                    "details": [
+                        "Analisi dei processi e produzione documentazione tecnico-funzionale basata su UML (casi d'uso, diagrammi di classe, sequenze, ER)",
+                        "Analisi dei Function Point",
+                        "Refactoring del sistema per dismissione delle licenze Oracle LODESTAR",
+                        "Coordinamento e supporto tecnico al gruppo di sviluppo",
+                        "Manutenzione correttiva del codice e risoluzione anomalie",
+                        "Redazione di testbook e collaudo del software",
+                        "Utilizzo di sistemi di ticketing, Jenkins e JIRA per il monitoraggio progetti",
+                        "Tecnologie principali: J2EE, JPA, Spring Core/Data/Batch/MVC, JMS, EJB3, REST, XML, JQuery, AngularJS, HTML5, WebLogic, Oracle 11g, Linux"
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Analista Tecnico-Funzionale / Architetto Web",
+            "company": "Penta Soluzioni Informatiche, Roma (Italia)",
+            "period": "01/2017 – 11/2017",
+            "activities": [
+                {
+                    "description": "Coordinamento del progetto, definizione dell’architettura e sviluppo di una piattaforma web per la gestione commerciale delle infrastrutture di telecomunicazioni wireless di CELLNEX TELECOM ITALIA.",
+                    "details": [
+                        "Analisi funzionale UML (casi d'uso, diagrammi di classe, sequenze, ER) e stima software tramite Function Point",
+                        "Definizione architetturale della piattaforma web e sviluppo back-end/front-end",
+                        "Collaudo software e produzione di test case",
+                        "Dashboard con grafici e mappe statistiche delle vendite",
+                        "Interfacce REST per accesso remoto ai dati",
+                        "Accesso alle funzionalità tramite browser e dispositivi mobili (tablet e smartphone)",
+                        "Tecnologie principali: J2EE, Spring MVC, REST, XML, JQuery, AngularJS, HTML5, MySQL, Tomcat 7.0, Linux",
+                        "Supporto alle attività di collaudo e validazione del software"
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Analista Tecnico - Funzionale / Architetto Web",
+            "company": "Intersistemi Italia, Roma (Italia)",
+            "period": "06/2002 – 12/2016",
+            "activities": [
+                {
+                    "description": "Reingegnerizzazione e sviluppo di un sistema batch di analisi dati (Datamart) su HOST nell'ambito dei rischi finanziari di BANCA INTESA San Paolo, traducendo programmi COBOL in Java e sviluppando applicazioni J2EE per la gestione dei flussi.",
+                    "details": [
+                        "Analisi UML (casi d'uso, diagrammi di classe, sequenze, ER, ecc) e dei Function Point",
+                        "Coordinamento del gruppo di lavoro",
+                        "Manutenzione correttiva ed evolutiva del software",
+                        "Sviluppo back-end e batch processing"
+                    ]
+                },
+                {
+                    "description": "Analisi tecnico funzionale e manutenzione di un sistema web di integrazione HOST-dipartimentale (TP) per le attività finanziarie di BANCA INTESA San Paolo.",
+                    "details": [
+                        "Reverse engineering dell'architettura del sistema",
+                        "Manutenzione correttiva ed evolutiva del software",
+                        "Analisi UML e Function Point",
+                        "Supporto tecnico al gruppo di sviluppo"
+                    ]
+                },
+                {
+                    "description": "Progettazione di un sistema web basato su SOA per il settore noleggio automobilistico, con services connector e orchestrazione per sistemi esterni (CRM, CRIBIS D&B, SAP, ecc.).",
+                    "details": [
+                        "Disegno dell'architettura, sviluppo e monitoraggio del sistema",
+                        "Tecnologie adottate: J2EE, Web Services, SOA, JAX-RPC, XML, SAX, PL-SQL"
+                    ]
+                },
+                {
+                    "description": "Coordinamento del progetto e manutenzione evolutiva e correttiva del sistema SprintWeb di BANCOPOSTA (Retail e Marketing Automation).",
+                    "details": [
+                        "Analisi UML e Function Point",
+                        "Coordinamento del gruppo di lavoro",
+                        "Supporto al collaudo e certificazione del software",
+                        "Tecnologie adottate: J2EE, Apache Struts, EJB, AJAX"
+                    ]
+                },
+                {
+                    "description": "Reingegnerizzazione del sistema SINTA per la gestione del ciclo di vita della tassa automobilistica ACI, con analisi requisiti, disegno architettura e prototipazione.",
+                    "details": [
+                        "Analisi UML (casi d'uso, diagrammi di classe, sequenze, ER, ecc)",
+                        "Disegno architettura e prototipazione",
+                        "Tecnologie: J2EE, Apache Struts, EJB, WebSphere, Oracle"
+                    ]
+                },
+                {
+                    "description": "Progettazione e sviluppo di un'applicazione web per il portale del Dipartimento Politiche Fiscali per conto di SOGEI.",
+                    "details": [
+                        "Produzione di documentazione tecnica e gestione dei Function Point",
+                        "Gestione portlet e contenuti",
+                        "Tecnologie: J2EE, Jetspeed Portal, Lucene, OpenCMS, MySQL, LDAP"
+                    ]
+                },
+                {
+                    "description": "Analisi funzionale, progettazione e supporto tecnico di un sistema di monitoraggio delle attività di magazzino dei tabacchi per conto del Monopolio di Stato.",
+                    "details": [
+                        "Coordinamento del gruppo di lavoro",
+                        "Supporto operativo e gestione periodica dei flussi",
+                        "Tecnologie: J2EE, JRun, Oracle"
+                    ]
+                },
+                {
+                    "description": "Gestione gare di appalto IT: analisi capitolato tecnico, consulenza tecnica e redazione documenti di fattibilità per partecipazione alle gare.",
+                    "details": [
+                        "Gestione risultati gare e studio fattibilità offerte tecniche",
+                        "Progetti per SOGEI, Ministero Comunicazioni, Consiglio di Stato e TAR, Bancoposta"
+                    ]
+                },
+                {
+                    "description": "Attività di gestione risorse umane: ricerca, selezione e reclutamento candidati, analisi retributiva e organizzazione del gruppo di lavoro.",
+                    "details": [
+                        "Contatto diretto con i clienti",
+                        "Organizzazione del gruppo di lavoro",
+                        "Gestione retributiva e selezione personale"
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Analista Programmatore Senior",
+            "company": "Sincro Consulting, Roma (Italia)",
+            "period": "04/1998 – 06/2002",
+            "activities": [
+                {
+                    "description": "Manutenzione evolutiva di un'applicazione web in ambito amministrativo per la gestione delle richieste di fatturazione telematica presso la SIEMENS, sviluppata in J2EE (Java Mail) su JRun 3.0 - Oracle8i - NT.",
+                    "details": [
+                        "Analisi e manutenzione evolutiva dell'applicazione web",
+                        "Tecnologie utilizzate: J2EE, Java Mail, JRun 3.0, Oracle8i",
+                        "Supporto operativo e coordinamento del team di sviluppo"
+                    ]
+                },
+                {
+                    "description": "Progettazione e sviluppo di un'applicazione client/server per la gestione della rete ENEL presso DATAMAT, sviluppata in PowerBuilder 5.0 e PL/SQL su Oracle 7.0 - NT.",
+                    "details": [
+                        "Coordinamento del gruppo di lavoro",
+                        "Sviluppo client/server in PowerBuilder 5.0 e PL/SQL",
+                        "Gestione test funzionali e controllo qualità del software"
+                    ]
+                },
+                {
+                    "description": "Manutenzione di un'applicazione client/server nell'ambito delle operazioni bancarie della BANCA D’ITALIA per la correzione del Millenium Bug, sviluppata in SQLForm e PL/SQL su Oracle 7.0 - Unix.",
+                    "details": [
+                        "Correzione del Millenium Bug e manutenzione applicativa",
+                        "Tecnologie: SQLForm, PL/SQL, Oracle 7.0 - Unix",
+                        "Supporto tecnico e coordinamento del team"
+                    ]
+                },
+                {
+                    "description": "Analisi e implementazione di un'applicazione client/server in ambito finanziario per la gestione contabile delle sovvenzioni statali dell'ospedale 'Fate Bene Fratelli', sviluppata in PowerBuilder su Informix - NT.",
+                    "details": [
+                        "Analisi funzionale e implementazione software",
+                        "Tecnologie: PowerBuilder, Informix - NT",
+                        "Supporto operativo e testing applicativo"
+                    ]
+                },
+                {
+                    "description": "Sviluppo di un'applicazione client/server per la normalizzazione di anagrafiche in ambito bancario, sviluppata in PowerBuilder su Oracle 7.0 - NT - Unix.",
+                    "details": [
+                        "Sviluppo e implementazione software per gestione anagrafiche",
+                        "Tecnologie: PowerBuilder, Oracle 7.0, NT, Unix",
+                        "Supporto al team di sviluppo e collaudo applicativo"
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Analista Programmatore",
+            "company": "Theorematica, Roma (Italia)",
+            "period": "04/1994 – 03/1998",
+            "activities": [
+                {
+                    "description": "Sviluppo di un'applicazione client/server per la gestione delle cartelle cliniche degli assistiti INAIL.",
+                    "details": [
+                        "Sviluppo client/server per gestione cartelle cliniche",
+                        "Tecnologie: PowerBuilder, Oracle 7.0 - NT",
+                        "Supporto al collaudo e manutenzione del software"
+                    ]
+                },
+                {
+                    "description": "Sviluppo di un'applicazione client/server per la gestione delle ispezioni periodiche dell'ispettorato ENEL.",
+                    "details": [
+                        "Sviluppo applicazione per gestione ispezioni ENEL",
+                        "Tecnologie: PowerBuilder, Oracle 7.0 - NT",
+                        "Supporto operativo e testing applicativo"
+                    ]
+                },
+                {
+                    "description": "Sviluppo di un'applicazione client/server per la gestione delle vendite di riviste specializzate di RAI INTERNATIONAL.",
+                    "details": [
+                        "Sviluppo applicazione per gestione vendite RAI INTERNATIONAL",
+                        "Tecnologie: PowerBuilder 5.0, Oracle 7.0 – NT",
+                        "Coordinamento attività di testing e collaudo"
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Amministrativo su PC",
+            "company": "Dott.ssa Emanuela Testi, Roma (Italia)",
+            "period": "1993",
+            "activities": [
+                {
+                    "description": "Addetto all'amministrazione del personale su PC presso lo studio di Emanuela Testi.",
+                    "details": [
+                        "Gestione attività amministrative su PC",
+                        "Supporto alla gestione del personale",
+                        "Organizzazione documentazione e archivi digitali"
+                    ]
+                }
+            ]
+        },
+        {
+            "role": "Amministrativo su PC",
+            "company": "Assicurazioni Generali S.P.A., Roma (Italia)",
+            "period": "1989",
+            "activities": [
+                {
+                    "description": "Addetto alla amministrazione su PC presso le assicurazioni Generali.",
+                    "details": [
+                        "Gestione attività amministrative su PC",
+                        "Supporto operativo alle procedure interne",
+                        "Archiviazione e organizzazione documentazione digitale"
+                    ]
+                }
+            ]
+        }
+    ],
+    "skills": {
+        "Operating Systems": [
+            "DOS",
+            "OS/2",
+            "UNIX",
+            "Windows NT",
+            "Linux"
+        ],
+        "Programming Languages": [
+            "Basic",
+            "COBOL",
+            "PL/SQL",
+            "Visual Basic",
+            "PowerBuilder",
+            "HTML5",
+            "XML",
+            "JavaScript",
+            "JQuery",
+            "Angular",
+            "Bootstrap",
+            "AJAX",
+            "J2EE",
+            "Android",
+            "UML",
+            "BPMN"
+        ],
+        "Development Environments": [
+            "Rational XDE",
+            "Enterprise Architect",
+            "JBuilder",
+            "WSAD",
+            "Eclipse",
+            "ADT",
+            "SoapUI",
+            "CVS",
+            "SVN"
+        ],
+        "Databases": [
+            "Access",
+            "Informix",
+            "DB2",
+            "Oracle 11g",
+            "SQLServer 2005",
+            "MySQL 4.0",
+            "Postgres"
+        ],
+        "Application Servers": [
+            "JRun",
+            "Tomcat 8.0",
+            "JBoss 6.0",
+            "WebSphere 7.5",
+            "WebLogic 10.3.5"
+        ],
+        "Frameworks": [
+            "Apache Struts",
+            "Spring Core",
+            "Spring JDBC",
+            "Spring MVC",
+            "Spring DATA",
+            "Spring Security",
+            "JWT",
+            "OAuth2",
+            "Spring Cloud",
+            "Spring REST",
+            "Spring Batch",
+            "Spring Boot",
+            "JPA",
+            "Hibernate",
+            "Jetspeed",
+            "OpenCMS",
+            "JBoss Portal",
+            "AXIS"
+        ],
+        "Other Applications": [
+            "Office",
+            "Microsoft Project",
+            "Photoshop",
+            "Flash MX",
+            "Dreamweaver",
+            "JIRA",
+            "Jenkins",
+            "Postman",
+            "Docker",
+            "Kubernetes",
+            "MuleSoft",
+            "KeyCloak",
+            "Camunda BPMN",
+            "Confluence"
+        ]
+    },
+    "softSkills": [
+        "Business Analysis",
+        "Analisi dei requisiti",
+        "Progettazione",
+        "Problem Solving",
+        "Team Collaboration",
+        "Gestione Attività",
+        "Formazione",
+        "Mentoring",
+        "Comunicazione Efficace",
+        "Adattabilità",
+        "Attenzione ai Dettagli"
+    ],
+    "education": [
+        {
+            "title": "Agile Business Analysis",
+            "institution": "Udemy",
+            "year": "2025",
+            "description": "Percorsi formativi sui principi Agile e sul framework Scrum, con approfondimento dei valori, principi, ruoli, eventi e artefatti."
+        },
+        {
+            "title": "Learn Camunda BPMN, DMN con Spring Boot",
+            "institution": "Udemy",
+            "year": "2025",
+            "description": "Corso sulla modellazione e automazione dei processi aziendali e delle decisioni con Camunda BPMN e DMN."
+        },
+        {
+            "title": "Pro Python – Guida professionale completa",
+            "institution": "Udemy",
+            "year": "2025",
+            "description": "Corso su Python, web services REST, sistemi di messaggistica (RabbitMQ), database NoSQL (MongoDB) e API per Intelligenza Artificiale."
+        },
+        {
+            "title": "Introduction to AI and Machine Learning on Google Cloud",
+            "institution": "Coursera",
+            "year": "2025",
+            "description": "Fondamenti di AI, Machine Learning e AI generativa su Google Cloud, addestramento e deployment di modelli ML con Vertex AI."
+        },
+        {
+            "title": "Introduzione all’Intelligenza Artificiale",
+            "institution": "Udemy",
+            "year": "2025",
+            "description": "Fondamenti di AI, Machine Learning e Deep Learning."
+        },
+        {
+            "title": "Esperto in programmazione",
+            "institution": "Istituto Von Newman, ObjectWay, Roma",
+            "year": "1994 – 2001",
+            "description": "Studio di vari linguaggi di programmazione e tecnologie OOP (COBOL, HTML, J2EE, XML)."
+        },
+        {
+            "title": "Esperto in amministrazione del personale su PC",
+            "institution": "Istituto professionale Umberto Taby, Regione Lazio, Roma",
+            "year": "1992",
+            "description": "Esperto in amministrazione del personale su PC."
+        },
+        {
+            "title": "Ragioneria",
+            "institution": "Istituto Tecnico Commerciale Paolo Toscanelli, Roma",
+            "year": "1979 – 1984",
+            "description": ""
+        }
+    ],
+    "languages": [
+        {
+            "name": "Italiano",
+            "level": "Madrelingua"
+        },
+        {
+            "name": "Inglese",
+            "skills": {
+                "Comprensione": "Utente base",
+                "Parlato": "Utente base",
+                "Produzione scritta": "Utente autonomo"
+            }
+        }
+    ],
+    "footer": {
+        "info": {
+            "name": "Paolo Giardina",
+            "description": "Sito di curriculum professionale",
+            "icon": "bi-person-badge"
+        },
+        "links": [
+            {
+                "text": "Informazioni",
+                "href": "#informazioni"
+            },
+            {
+                "text": "Esperienza",
+                "href": "#esperienza"
+            },
+            {
+                "text": "Competenze",
+                "href": "#competenze"
+            },
+            {
+                "text": "Formazione",
+                "href": "#formazione"
+            },
+            {
+                "text": "Lingue",
+                "href": "#lingue"
+            }
+        ],
+        "social": [
+            {
+                "type": "email",
+                "href": "mailto:giardinapaolo@hotmail.it",
+                "icon": "bi-envelope"
+            },
+            {
+                "type": "linkedin",
+                "href": "http://www.linkedin.com/in/paologiardina",
+                "icon": "bi-linkedin"
+            }
+        ],
+        "note": "&copy; 2026 Paolo Giardina. Tutti i diritti riservati."
     }
 }
