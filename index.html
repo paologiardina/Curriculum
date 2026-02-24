@@ -29,12 +29,24 @@
         <button class="btn btn-outline-primary" type="submit">
           <i class="bi bi-search"></i>
         </button>
+        <div class="d-flex align-items-center ms-4">
+          <button type="button" id="langIt" class="btn border-0 btn-sm" title="Passa a Italiano"
+            aria-label="Passa a Italiano">
+            <img src="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/flags/4x3/it.svg" alt="IT"
+              style="width:20px; height:auto;">
+          </button>
+          <button type="button" id="langEn" class="btn border-0 btn-sm" title="Switch to English"
+            aria-label="Switch to English">
+            <img src="https://cdn.jsdelivr.net/npm/flag-icons@6.6.6/flags/4x3/gb.svg" alt="UK"
+              style="width:20px; height:auto;">
+          </button>
+        </div>
         <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
           aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </form>
-      <div class="collapse navbar-collapse" id="navbarMenu">
+      <div class="collapse navbar-collapse mt-lg-0" id="navbarMenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navbarList">
         </ul>
       </div>
@@ -64,32 +76,32 @@
     <div class="row mt-4">
       <div class="col-md-8">
         <div class="profile-card p-4 mb-3" id="informazioni">
-          <div class="section-title">Informazioni</div>
-          <p id="profile-informazioni"></p>
+          <div class="section-title" id="profile-information-title"></div>
+          <p id="profile-information"></p>
         </div>
         <div class="profile-card p-4 mb-3" id="esperienza">
-          <div class="section-title">Esperienza</div>
+          <div class="section-title" id="experience-title"></div>
           <div id="experience-list"></div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="profile-card p-4 mb-3" id="competenze">
-          <div class="section-title">Competenze Professionali</div>
+          <div class="section-title" id="professionalSkills-title"></div>
           <div class="skill-badges d-flex flex-wrap gap-2">
           </div>
         </div>
         <div class="profile-card p-4 mb-3" id="soft-skills">
-          <div class="section-title">Soft Skills</div>
+          <div class="section-title" id="softSkills-title"></div>
           <div class="skill-badges d-flex flex-wrap gap-2">
           </div>
         </div>
         <div class="profile-card p-4 mb-3" id="formazione">
-          <div class="section-title">Formazione</div>
+          <div class="section-title" id="education-title"></div>
           <div class="education-details">
           </div>
         </div>
         <div class="profile-card p-4" id="lingue">
-          <div class="section-title">Lingue</div>
+          <div class="section-title" id="languages-title"></div>
           <div class="language-details">
           </div>
         </div>
@@ -120,7 +132,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-  <script src="scripts/main.min.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>

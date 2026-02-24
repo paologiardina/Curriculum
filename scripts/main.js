@@ -2,6 +2,8 @@
 
     "use strict";
 
+    let currentLang = "it";
+
     function escapeRegExp(str) {
         return String(str).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     }
@@ -134,190 +136,233 @@
         }
     });
 
-    $.getJSON("data/data.json", function (data) {
+    function loadData() {
 
-        const $list = $("#navbarList");
-        $list.empty();
+        const jsonLabels = currentLang === "it" ? "data/labels.json" : "data/labels-en.json";
+        const jsonData = currentLang === "it" ? "data/data.json" : "data/data-en.json";
 
-        data.menu
-            .filter((item) => item.visible)
-            .sort((a, b) => a.order - b.order)
-            .forEach((item) => {
-                const $li = $("<li>", { class: "nav-item" });
-                const $a = $("<a>", {
-                    class: "nav-link",
-                    href: item.href,
-                    text: item.label,
-                });
+        let labels = {};
 
-                $li.append($a);
-                $list.append($li);
-            });
-
-        // Popola la card del profilo
-
-        $('#profile-img').attr('src', data.profile.profileImg).attr('alt', data.profile.name);
-        $('#profile-cover').css('background-image', 'url(' + data.profile.coverImg + ')');
-        $('#profile-name').text(data.profile.name);
-        $('#profile-role').text(data.profile.role);
-        $('#profile-location').text(data.profile.location);
-        $('#profile-experience').text(data.profile.experience);
-        $('#profile-email').text(data.profile.email).attr('href', 'mailto:' + data.profile.email);
-        $('#profile-linkedin').attr('href', data.profile.linkedin);
-        $('#profile-cv').attr('href', data.profile.cv);
-        $('#profile-informazioni').text(data.profile.informazioni);
-
-        // Popola la card delle esperienze
-
-        var $expContainer = $('#experience-list');
-
-        $expContainer.empty();
-
-        data.experience.forEach(function (exp) {
-
-            var $item = $('<div>', { class: 'experience-item mb-3' });
-
-            $item.append('<h6>' + exp.role + '</h6>');
-            $item.append(
-                '<div class="company">' +
-                exp.company + ' · ' + exp.period +
-                '</div>'
-            );
-
-            exp.activities.forEach(function (act) {
-
-                $item.append(
-                    '<p class="small mt-2">' + act.description + '</p>'
-                );
-
-                if (act.details && act.details.length) {
-
-                    var $ul = $('<ul>');
-
-                    act.details.forEach(function (detail) {
-                        $ul.append('<li>' + detail + '</li>');
-                    });
-
-                    $item.append(
-                        $('<div>', { class: 'experience-details' })
-                            .append('Dettagli competenze e responsabilità:')
-                            .append($ul)
-                    );
-                }
-            });
-
-            $expContainer.append($item);
+        $.getJSON(jsonLabels, function (data) {
+            labels = data;
+        }).fail(function () {
+            console.error("Errore caricamento data.json");
         });
 
-        // Popola la sezione Competenze
+        $.getJSON(jsonData, function (data) {
 
-        var $skillsContainer = $('#competenze .skill-badges');
+            const $list = $("#navbarList");
+            $list.empty();
 
-        $skillsContainer.empty();
+            data.menu
+                .filter((item) => item.visible)
+                .sort((a, b) => a.order - b.order)
+                .forEach((item) => {
+                    const $li = $("<li>", { class: "nav-item" });
+                    const $a = $("<a>", {
+                        class: "nav-link",
+                        href: item.href,
+                        text: item.label,
+                    });
 
-        $.each(data.skills, function (category, skillsArray) {
+                    $li.append($a);
+                    $list.append($li);
+                });
 
-            skillsArray.forEach(function (skill) {
+            // Popola la card del profilo
 
-                $skillsContainer.append(
+            $('#profile-img').attr('src', data.profile.profileImg).attr('alt', data.profile.name);
+            $('#profile-cover').css('background-image', 'url(' + data.profile.coverImg + ')');
+            $('#profile-name').text(data.profile.name);
+            $('#profile-role').text(data.profile.role);
+            $('#profile-location').text(data.profile.location);
+            $('#profile-experience').text(data.profile.experience);
+            $('#profile-email').text(data.profile.email).attr('href', 'mailto:' + data.profile.email);
+            $('#profile-linkedin').attr('href', data.profile.linkedin);
+            $('#profile-cv').attr('href', data.profile.cv);
+            $('#profile-information-title').text(labels.information);
+            $('#profile-information').text(data.profile.information);
+
+            // Popola la card delle esperienze
+
+            var $expContainer = $('#experience-list');
+
+            $expContainer.empty();
+
+            data.experience.forEach(function (exp) {
+
+                $('#experience-title').text(labels.experience);
+
+                var $item = $('<div>', { class: 'experience-item mb-3' });
+
+                $item.append('<h6>' + exp.role + '</h6>');
+                $item.append(
+                    '<div class="company">' +
+                    exp.company + ' · ' + exp.period +
+                    '</div>'
+                );
+
+                exp.activities.forEach(function (act) {
+
+                    $item.append(
+                        '<p class="small mt-2">' + act.description + '</p>'
+                    );
+
+                    if (act.details && act.details.length) {
+
+                        var $ul = $('<ul>');
+
+                        act.details.forEach(function (detail) {
+                            $ul.append('<li>' + detail + '</li>');
+                        });
+
+                        $item.append(
+                            $('<div>', { class: 'experience-details' })
+                                .append(labels.skillsDetails)
+                                .append($ul)
+                        );
+                    }
+                });
+
+                $expContainer.append($item);
+            });
+
+            // Popola la sezione Competenze
+
+            $('#professionalSkills-title').text(labels.professionalSkills);
+
+            var $skillsContainer = $('#competenze .skill-badges');
+
+            $skillsContainer.empty();
+
+            $.each(data.skills, function (category, skillsArray) {
+
+                skillsArray.forEach(function (skill) {
+
+                    $skillsContainer.append(
+                        $('<span>', {
+                            class: 'badge badge-skill',
+                            text: skill
+                        })
+                    );
+                });
+            });
+
+            // Popola la sezione Competenze
+
+            $('#soft-skills-title').text(labels.softSkills);
+
+            var $softSkillsContainer = $('#soft-skills .skill-badges');
+
+            $softSkillsContainer.empty();
+
+            data.softSkills.forEach(function (skill) {
+
+                $softSkillsContainer.append(
                     $('<span>', {
                         class: 'badge badge-skill',
                         text: skill
                     })
                 );
             });
-        });
 
-        var $softSkillsContainer = $('#soft-skills .skill-badges');
-        $softSkillsContainer.empty();
+            // Popola la sezione Formazione
 
-        data.softSkills.forEach(function (skill) {
+            $('#education-title').text(labels.education);
 
-            $softSkillsContainer.append(
-                $('<span>', {
-                    class: 'badge badge-skill',
-                    text: skill
-                })
-            );
-        });
+            var $eduContainer = $('#formazione .education-details');
 
-        // Popola la sezione Formazione
+            $eduContainer.empty();
 
-        var $eduContainer = $('#formazione .education-details');
+            var $ul = $('<ul>');
 
-        $eduContainer.empty();
+            data.education.forEach(function (item) {
 
-        var $ul = $('<ul>');
+                var $li = $('<li>').text(item.title + ' – ' + item.institution + ' (' + item.year + ')');
 
-        data.education.forEach(function (item) {
-
-            var $li = $('<li>').text(item.title + ' – ' + item.institution + ' (' + item.year + ')');
-
-            if (item.description) {
-                $li.append('<p>' + item.description + '</p>');
-            }
-
-            $ul.append($li);
-        });
-
-        $eduContainer.append($ul);
-
-        // Popola la sezione Lingua
-
-        var $langContainer = $('#lingue .language-details');
-
-        $langContainer.empty();
-
-        data.languages.forEach(function (lang) {
-
-            var $item = $('<div>', { class: 'language-item mb-3' });
-
-            if (lang.level) {
-
-                $item.append('<p class="mb-1"><strong>' + lang.name + '</strong> – ' + lang.level + '</p>');
-
-            } else if (lang.skills) {
-
-                $item.append('<p class="mb-1"><strong>' + lang.name + '</strong></p>');
-
-                var $ul = $('<ul>', { class: 'list-unstyled small mb-0' });
-
-                for (var skill in lang.skills) {
-                    $ul.append('<li>' + skill + ': ' + lang.skills[skill] + '</li>');
+                if (item.description) {
+                    $li.append('<p>' + item.description + '</p>');
                 }
 
-                $item.append($ul);
-            }
+                $ul.append($li);
+            });
 
-            $langContainer.append($item);
+            $eduContainer.append($ul);
+
+            // Popola la sezione Lingua
+
+            $('#languages-title').text(labels.languages);
+
+            var $langContainer = $('#lingue .language-details');
+
+            $langContainer.empty();
+
+            data.languages.forEach(function (lang) {
+
+                var $item = $('<div>', { class: 'language-item mb-3' });
+
+                if (lang.level) {
+
+                    $item.append('<p class="mb-1"><strong>' + lang.name + '</strong> – ' + lang.level + '</p>');
+
+                } else if (lang.skills) {
+
+                    $item.append('<p class="mb-1"><strong>' + lang.name + '</strong></p>');
+
+                    var $ul = $('<ul>', { class: 'list-unstyled small mb-0' });
+
+                    for (var skill in lang.skills) {
+                        $ul.append('<li>' + skill + ': ' + lang.skills[skill] + '</li>');
+                    }
+
+                    $item.append($ul);
+                }
+
+                $langContainer.append($item);
+            });
+
+            var $footerInfo = $('#footer-info');
+
+            $footerInfo.empty();
+
+            $footerInfo.append('<i class="bi ' + data.footer.info.icon + ' fs-2 text-primary me-2 fixed-icon-size"></i>');
+            $footerInfo.append('<div><p class="mb-0 fs-5"><strong>' + data.footer.info.name + '</strong></p><p class="mb-0">' + data.footer.info.description + '</p></div>');
+
+            var $footerLinks = $('#footer-links ul');
+
+            $footerLinks.empty();
+
+            data.footer.links.forEach(function (link) {
+                $footerLinks.append('<li><a href="' + link.href + '" class="text-muted text-decoration-none">' + link.text + '</a></li>');
+            });
+
+            var $footerSocial = $('#footer-social');
+
+            $footerSocial.find('a, i').remove();
+
+            data.footer.social.forEach(function (social) {
+                $footerSocial.append('<a href="' + social.href + '" class="text-muted me-2 fs-5"><i class="bi ' + social.icon + '"></i></a>');
+            });
+
+            $('#footer-note').html(data.footer.note);
+
+        }).fail(function () {
+            console.error("Errore caricamento data.json");
         });
+    }
 
-        var $footerInfo = $('#footer-info');
-
-        $footerInfo.empty();
-
-        $footerInfo.append('<i class="bi ' + data.footer.info.icon + ' fs-2 text-primary me-2 fixed-icon-size"></i>');
-        $footerInfo.append('<div><p class="mb-0 fs-5"><strong>' + data.footer.info.name + '</strong></p><p class="mb-0">' + data.footer.info.description + '</p></div>');
-
-        var $footerLinks = $('#footer-links ul');
-
-        $footerLinks.empty();
-
-        data.footer.links.forEach(function (link) {
-            $footerLinks.append('<li><a href="' + link.href + '" class="text-muted text-decoration-none">' + link.text + '</a></li>');
-        });
-
-        var $footerSocial = $('#footer-social');
-
-        $footerSocial.find('a, i').remove();
-
-        data.footer.social.forEach(function (social) {
-            $footerSocial.append('<a href="' + social.href + '" class="text-muted me-2 fs-5"><i class="bi ' + social.icon + '"></i></a>');
-        });
-
-        $('#footer-note').html(data.footer.note);
-
-    }).fail(function () {
-        console.error("Errore caricamento data.json");
+    $('#langIt').on('click', function (e) {
+        e.preventDefault();
+        currentLang = "it";
+        loadData();
     });
+
+    $('#langEn').on('click', function (e) {
+        e.preventDefault();
+        currentLang = "en";
+        loadData();
+    });
+
+    loadData();
+
 })(jQuery);
