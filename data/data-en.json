@@ -2,6 +2,8 @@
     "meta": {
         "version": "1.0"
     },
+    "title": "Paolo Giardina - CV",
+    "searchPlaceholder": "Enter key to search...",
     "menu": [
         {
             "id": "informazioni",
@@ -49,7 +51,21 @@
         "profileImg": "images/profile.png",
         "coverImg": "images/cover.jpg",
         "cv": "giardinapaolo.pdf",
-        "information": "Functional Analyst and Business Analyst with solid experience in designing and evolving complex information systems in the Finance, Banking, Insurance, Utilities, and Central Public Administration sectors. Specialized in functional and technical-functional analysis, requirements gathering, and aligning business needs with technological solutions. I have worked on digitalization, application integration, and legacy system reengineering projects, including HOST environments and historical languages, guiding their evolution toward modern service-oriented architectures. Skilled in UML, BPMN, and Function Point Analysis, working in Agile/Scrum contexts throughout the full software development lifecycle."
+        "information": "Functional Analyst and Business Analyst with solid experience in designing and evolving complex information systems in the Finance, Banking, Insurance, Utilities, and Central Public Administration sectors. Specialized in functional and technical-functional analysis, requirements gathering, and aligning business needs with technological solutions. I have worked on digitalization, application integration, and legacy system reengineering projects, including HOST environments and historical languages, guiding their evolution toward modern service-oriented architectures. Skilled in UML, BPMN, and Function Point Analysis, working in Agile/Scrum contexts throughout the full software development lifecycle.",
+        "social": [
+            {
+                "icon": "bi-envelope",
+                "text": "giardinapaolo@hotmail.it",
+                "href": "mailto:giardinapaolo@hotmail.it",
+                "id": "profile-email"
+            },
+            {
+                "icon": "bi-linkedin",
+                "text": "LinkedIn",
+                "href": "http://www.linkedin.com/in/paologiardina",
+                "id": "profile-linkedin"
+            }
+        ]
     },
     "experience": [
         {

@@ -4,26 +4,37 @@
 
     let currentLang = "it";
 
+    let audio = null;
+    let isPlaying = false;
+
+    $('.play-audio').on('click', function () {
+
+        const icon = $(this).find('i');
+
+        const audioSrc = currentLang === 'it' ? 'audio/presentation.mp3' : 'audio/presentation-en.mp3';
+
+        if (isPlaying && audio) {
+            audio.pause();
+            audio.currentTime = 0;
+            isPlaying = false;
+            icon.removeClass('bi-stop-circle').addClass('bi-volume-up');
+            return;
+        }
+
+        audio = new Audio(audioSrc);
+        isPlaying = true;
+
+        icon.removeClass('bi-volume-up').addClass('bi-stop-circle');
+        audio.play();
+
+        audio.addEventListener('ended', function () {
+            isPlaying = false;
+            icon.removeClass('bi-stop-circle').addClass('bi-volume-up');
+        });
+    });
+
     function escapeRegExp(str) {
         return String(str).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    }
-
-    function showAlert(message) {
-
-        var $alert = $("<div>")
-            .addClass("alert alert-warning shadow")
-            .attr("role", "alert")
-            .text(message)
-            .css({ position: "fixed", top: "1rem", right: "1rem", zIndex: 1080 })
-            .hide()
-            .appendTo("body")
-            .fadeIn(200)
-            .delay(2200)
-            .fadeOut(200, function () {
-                $(this).remove();
-            });
-
-        return $alert;
     }
 
     $(function () {
@@ -111,7 +122,7 @@
             });
         }
 
-        // Back to Top behavior
+        // Back to Top
 
         if ($backToTopBtn.length) {
 
@@ -138,7 +149,7 @@
 
     function loadData() {
 
-        const jsonLabels = currentLang === "it" ? "data/labels.json" : "data/labels-en.json";
+        const jsonLabels = currentLang === "it" ? "labels/labels.json" : "labels/labels-en.json";
         const jsonData = currentLang === "it" ? "data/data.json" : "data/data-en.json";
 
         let labels = {};
@@ -150,6 +161,10 @@
         });
 
         $.getJSON(jsonData, function (data) {
+
+            $('title').text(data.title);
+
+            $('#searchInput').attr('placeholder', data.searchPlaceholder);
 
             const $list = $("#navbarList");
             $list.empty();
@@ -177,11 +192,33 @@
             $('#profile-role').text(data.profile.role);
             $('#profile-location').text(data.profile.location);
             $('#profile-experience').text(data.profile.experience);
-            $('#profile-email').text(data.profile.email).attr('href', 'mailto:' + data.profile.email);
-            $('#profile-linkedin').attr('href', data.profile.linkedin);
             $('#profile-cv').attr('href', data.profile.cv);
             $('#profile-information-title').text(labels.information);
             $('#profile-information').text(data.profile.information);
+            $('#presentation').text(" " + labels.presentation);
+            $('#download-cv').text(" " + labels.downloadCV);
+
+            const $socialContainer = $('#profile-social');
+
+            $socialContainer.empty();
+
+            data.profile.social.forEach(function (social, index) {
+
+                const $icon = $('<i>').addClass('bi ' + social.icon);
+
+                const $link = $('<a>')
+                    .attr('href', social.href)
+                    .attr('target', '_blank')
+                    .addClass('text-decoration-none')
+                    .attr('id', social.id)
+                    .text(" " + social.text);
+
+                $socialContainer.append($icon, $link);
+
+                if (index < data.profile.social.length - 1) {
+                    $socialContainer.append('&nbsp;·&nbsp;');
+                }
+            });
 
             // Popola la card delle esperienze
 
@@ -227,7 +264,7 @@
                 $expContainer.append($item);
             });
 
-            // Popola la sezione Competenze
+            // Popola la sezione Competenze Professionali
 
             $('#professionalSkills-title').text(labels.professionalSkills);
 
@@ -248,7 +285,7 @@
                 });
             });
 
-            // Popola la sezione Competenze
+            // Popola la sezione soft Skills
 
             $('#soft-skills-title').text(labels.softSkills);
 
@@ -321,12 +358,16 @@
                 $langContainer.append($item);
             });
 
+            // Popola la sezione Footer
+
             var $footerInfo = $('#footer-info');
 
             $footerInfo.empty();
 
             $footerInfo.append('<i class="bi ' + data.footer.info.icon + ' fs-2 text-primary me-2 fixed-icon-size"></i>');
             $footerInfo.append('<div><p class="mb-0 fs-5"><strong>' + data.footer.info.name + '</strong></p><p class="mb-0">' + data.footer.info.description + '</p></div>');
+
+            $('#links-title').text(labels.links);
 
             var $footerLinks = $('#footer-links ul');
 
@@ -335,6 +376,8 @@
             data.footer.links.forEach(function (link) {
                 $footerLinks.append('<li><a href="' + link.href + '" class="text-muted text-decoration-none">' + link.text + '</a></li>');
             });
+
+            $('#social-title').text(labels.social);
 
             var $footerSocial = $('#footer-social');
 

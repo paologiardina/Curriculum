@@ -2,6 +2,8 @@
     "meta": {
         "version": "1.0"
     },
+    "title": "Paolo Giardina - CV",
+    "searchPlaceholder": "Digita la chiave...",
     "menu": [
         {
             "id": "informazioni",
@@ -44,12 +46,24 @@
         "role": "Analista Funzionale Senior / Business Analyst – Web & Digital Solutions",
         "location": "Roma, Italia",
         "experience": "30 anni di esperienza",
-        "email": "giardinapaolo@hotmail.it",
-        "linkedin": "https://www.linkedin.com/in/paologiardina",
         "profileImg": "images/profile.png",
         "coverImg": "images/cover.jpg",
         "cv": "giardinapaolo.pdf",
-        "information": "Analista Funzionale e Business Analyst con solida esperienza nella progettazione e nell’evoluzione di sistemi informativi complessi nei settori Finance, Banking, Insurance, Utility e Pubblica Amministrazione Centrale. Specializzato nell’analisi funzionale e tecnico-funzionale, nella raccolta dei requisiti e nell’allineamento tra esigenze di business e soluzioni tecnologiche. Ho operato su progetti di digitalizzazione, integrazione applicativa e reingegnerizzazione di sistemi legacy, inclusi contesti HOST e linguaggi storici, accompagnandone l’evoluzione verso architetture moderne a servizi. Utilizzo UML, BPMN e Function Point Analysis e lavoro in contesti Agile/Scrum seguendo l’intero ciclo di vita del software."
+        "information": "Analista Funzionale e Business Analyst con solida esperienza nella progettazione e nell’evoluzione di sistemi informativi complessi nei settori Finance, Banking, Insurance, Utility e Pubblica Amministrazione Centrale. Specializzato nell’analisi funzionale e tecnico-funzionale, nella raccolta dei requisiti e nell’allineamento tra esigenze di business e soluzioni tecnologiche. Ho operato su progetti di digitalizzazione, integrazione applicativa e reingegnerizzazione di sistemi legacy, inclusi contesti HOST e linguaggi storici, accompagnandone l’evoluzione verso architetture moderne a servizi. Utilizzo UML, BPMN e Function Point Analysis e lavoro in contesti Agile/Scrum seguendo l’intero ciclo di vita del software.",
+        "social": [
+            {
+                "icon": "bi-envelope",
+                "text": "giardinapaolo@hotmail.it",
+                "href": "mailto:giardinapaolo@hotmail.it",
+                "id": "profile-email"
+            },
+            {
+                "icon": "bi-linkedin",
+                "text": "LinkedIn",
+                "href": "http://www.linkedin.com/in/paologiardina",
+                "id": "profile-linkedin"
+            }
+        ]
     },
     "experience": [
         {
